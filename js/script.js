@@ -29,6 +29,7 @@ const app = new Vue({
             }
         ],
         indice: 0,
+        intervallo: null,
 
     },
     methods: {
@@ -48,7 +49,16 @@ const app = new Vue({
                 this.indice -= 1
             }
 
+        },
+        startSlider(){
+            this.intervallo = setInterval(()=>{
+             this.indicePiu()
+            }, 2000)
+        
+        },
+        stopSlider(){
+            clearInterval(this.intervallo);
+            this.intervallo = null;
         }
-
     }
 })
