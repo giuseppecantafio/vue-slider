@@ -29,11 +29,26 @@ const app = new Vue({
             }
         ],
         indice: 0,
-    },
-    method: {
 
     },
-    mounted(){
+    methods: {
+        indicePiu(){
+            if (this.indice === 4) {
+                this.indice = 0
+            } else {
+                this.indice += 1
+            }
+
+        },
+
+        indiceMeno(){
+            if (this.indice === 0) {
+                this.indice = 4
+            } else {
+                this.indice -= 1
+            }
+
+        }
 
     }
 })
