@@ -60,5 +60,8 @@ const app = new Vue({
             clearInterval(this.intervallo);
             this.intervallo = null;
         }
+    },
+    mounted(){
+        this.startSlider()
     }
 })
